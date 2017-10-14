@@ -12,7 +12,7 @@ if (!$staff || $staff->getRoleID() < 7){
 <title><?php echo $sv['site_name'];?> Inventory</title>
 <div id="page-wrapper">
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-12"> <!-- this number shows how long the column is -->
             <h1 class="page-header">Inventory</h1>
         </div>
         <!-- /.col-lg-12 -->
@@ -23,7 +23,7 @@ if (!$staff || $staff->getRoleID() < 7){
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <i class="fa fa-ticket fa-fw"></i> Inventory List
-                    <div class ="pull-right">
+                    <div class ="pull-right"> <!-- These are comments. direction of button -->
                       <div class="btn-group">
                         <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
                           Actionis<span class="caret"></span>
@@ -33,7 +33,7 @@ if (!$staff || $staff->getRoleID() < 7){
                             </li>
                             <li><a href="#">Add Existing Material</a>
                             </li>
-                            <li class="divider"></li>
+                            <li class="divider"></li> /*divider for other link*/
                             <li><a href="#">Another Link</a>
                             </li>
                           </ul>
@@ -45,15 +45,23 @@ if (!$staff || $staff->getRoleID() < 7){
                   <div class="col-lg-10">
                     <div class="table-responsive">
                       <table class="table table-bordered table-hover table-striped">
-                        <thead>
+                        <thead> <!-- title names of table ->
                           <tr>
                             <th>Image</th>
                             <th>Name</th>
                             <th>Serial #</th>
-                            <th>Current Amount</th>
+                            <th>Current Amount(grams)</th>
                             <th>Time Remaining</th>
                           </tr>
                         </thead>
+                        <tbody>
+                          <tr> <!-- examples of table. We need to implement items with a function instead through Adding -->
+                            <td>Image Link</td>
+                            <td>Abs Color</td>
+                            <td>Serial Number</td>
+                            <td>1000</td>
+                            <td>4 Months</td>
+                          </tr>
                                   
                                         
                       </table>
