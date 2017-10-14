@@ -13,36 +13,69 @@ if (!$staff || $staff->getRoleID() < 7){
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Page Name</h1>
+            <h1 class="page-header">Inventory</h1>
         </div>
         <!-- /.col-lg-12 -->
     </div>
     <!-- /.row -->
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <i class="fa fa-ticket fa-fw"></i> Title
+                    <i class="fa fa-ticket fa-fw"></i> Inventory List
+                    <div class ="pull-right">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                          Actionis<span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu pull-right" role="menu">
+                            <li><a href="#">Add New Material</a>
+                            </li>
+                            <li><a href="#">Add Existing Material</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="#">Another Link</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                 </div>
                 <div class="panel-body">
-                    
+                <div class="row">
+                  <div class="col-lg-10">
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-hover table-striped">
+                        <thead>
+                          <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Serial #</th>
+                            <th>Current Amount</th>
+                            <th>Time Remaining</th>
+                          </tr>
+                        </thead>
+                                  
+                                        
+                      </table>
+                    </div>
+                    <!-- /.table-responsive -->
+                  </div>
+                  <!-- /.col-lg-10 (nested) -->
+                  <div class="col-lg-4">
+                    <div id="morris-bar-chart"></div>
+                  </div>
+                  <!-- /.col-lg-4 (nested) -->
                 </div>
+                <!-- /.row -->
             </div>
-        </div>
-        <!-- /.col-md-8 -->
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <i class="fa fa-calculator fa-fw"></i> Col 4
-                </div>
-                <div class="panel-body">
-                    
+            <!-- /.panel-body -->
+          </div>
                 </div>
                 <!-- /.panel-body -->
             </div>
             <!-- /.panel -->
         </div>
-        <!-- /.col-md-4 -->
+        <!-- /.col-md-10 -->
     </div>
     <!-- /.row -->
 </div>
