@@ -23,7 +23,7 @@ if (!$staff || $staff->getRoleID() < 7){
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <i class="fa fa-ticket fa-fw"></i> Inventory List
-                    <div class ="pull-right"> <!-- These are comments. direction of button -->
+                    <div class ="pull-right"> <!-- This is a comment. direction of button -->
                       <div class="btn-group">
                         <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
                           Actionis<span class="caret"></span>
@@ -33,7 +33,7 @@ if (!$staff || $staff->getRoleID() < 7){
                             </li>
                             <li><a href="#">Add Existing Material</a>
                             </li>
-                            <li class="divider"></li> /*divider for other link*/
+                            <li class="divider"></li> //divider for other link
                             <li><a href="#">Another Link</a>
                             </li>
                           </ul>
@@ -45,7 +45,7 @@ if (!$staff || $staff->getRoleID() < 7){
                   <div class="col-lg-10">
                     <div class="table-responsive">
                       <table class="table table-bordered table-hover table-striped">
-                        <thead> <!-- title names of table ->
+                        <thead> <!-- title names of table -->
                           <tr>
                             <th>Image</th>
                             <th>Name</th>
@@ -62,6 +62,7 @@ if (!$staff || $staff->getRoleID() < 7){
                             <td>1000</td>
                             <td>4 Months</td>
                           </tr>
+                        </tbody>
                                   
                                         
                       </table>
