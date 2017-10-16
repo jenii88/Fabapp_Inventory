@@ -8,6 +8,17 @@ if (!$staff || $staff->getRoleID() < 7){
     //Not Authorized to see this Page
     header('Location: index.php');
 }
+<!-- added random things for errors -->
+$array = array();
+foreach($array as $value ) {
+  echo "<br />";
+}
+foreach($array as $value) {
+  if($value ==4) continue;
+  
+}
+<!-- ends random useless code -->
+
 ?>
 <title><?php echo $sv['site_name'];?> Inventory</title>
 <div id="page-wrapper">
@@ -31,9 +42,9 @@ if (!$staff || $staff->getRoleID() < 7){
                           <ul class="dropdown-menu pull-right" role="menu">
                             <li><a href="#">Add New Material</a>
                             </li>
-                            <li><a href="#">Add Existing Material</a>
+                            <li><!--  removed <a href="#"> -->Add Existing Material</a>
                             </li>
-                            <li class="divider"></li> //divider for other link
+                            <li class="divider"> /*divider for other link: removed </li> */
                             <li><a href="#">Another Link</a>
                             </li>
                           </ul>
@@ -51,7 +62,7 @@ if (!$staff || $staff->getRoleID() < 7){
                             <th>Name</th>
                             <th>Serial #</th>
                             <th>Current Amount(grams)</th>
-                            <th>Time Remaining</th>
+                            <th>Time Remaining <!-- removed </th> -->
                           </tr>
                         </thead>
                         <tbody>
