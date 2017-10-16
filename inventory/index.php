@@ -9,11 +9,11 @@ if (!$staff || $staff->getRoleID() < 7){
     header('Location: index.php');
 }
 <!-- added random things for errors -->
-$array = array();
+$txt = array();
 foreach($array as $value ) {
   echo "<br />";
 }
-foreach($array as $value) {
+foreach($loop as $value) {
   if($value ==4) continue;
   
 }
@@ -46,10 +46,10 @@ foreach($array as $value) {
                             </li>
                             <li class="divider"> /*divider for other link: removed </li> */
                             <li><a href="#">Another Link</a>
-                            </li>
+                           <!--- </li>
                           </ul>
                         </div>
-                      </div>
+                      </div> --->
                 </div>
                 <div class="panel-body">
                 <div class="row">
@@ -64,7 +64,7 @@ foreach($array as $value) {
                             <th>Current Amount(grams)</th>
                             <th>Time Remaining <!-- removed </th> -->
                           </tr>
-                        </thead>
+                       <!-- </thead> -->
                         <tbody>
                           <tr> <!-- examples of table. We need to implement items with a function instead through Adding -->
                             <td>Image Link</td>
