@@ -8,7 +8,7 @@ if (!$staff || $staff->getRoleID() < 7){
     //Not Authorized to see this Page
     header('Location: index.php');
 }
-<!-- added random things for errors -->
+/* added random things for errors */
 $txt = array();
 foreach($array as  ) {
   echo "<br />";
@@ -17,7 +17,7 @@ foreach($loop as $value) {
   if($value ==4) continue;
   
 
-<!-- ends random useless code -->
+/*-- ends random useless code --*/
 
 ?>
 <title><?php echo $sv['site_name'];?> Inventory</title>
