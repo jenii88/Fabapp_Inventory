@@ -8,20 +8,9 @@ if (!$staff || $staff->getRoleID() < 7){
     //Not Authorized to see this Page
     header('Location: index.php');
 }
-/* added random things for errors */
-$txt = array();
-foreach($array as  ) {
-  echo "<br />";
-}
-foreach($loop as $value) {
-  if($value ==4) continue;
-  
-
-/*-- ends random useless code --*/
-
 ?>
 <title><?php echo $sv['site_name'];?> Inventory</title>
-<!---<div id="page-wrapper"> --->
+<div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12"> <!-- this number shows how long the column is -->
             <h1 class="page-header">Inventory</h1>
@@ -37,19 +26,19 @@ foreach($loop as $value) {
                     <div class ="pull-right"> <!-- This is a comment. direction of button -->
                       <div class="btn-group">
                         <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                         <!--- Actionis<span class="caret"></span> --->
+                          Actionis<span class="caret"></span>
                           </button>
                           <ul class="dropdown-menu pull-right" role="menu">
                             <li><a href="#">Add New Material</a>
                             </li>
-                            <li><!--  removed <a href="#"> -->Add Existing Material</a>
+                            <li><a href="#">Add Existing Material</a>
                             </li>
-                            <li class="divider"> /*divider for other link: removed </li> */
+                            <li class="divider"></li> //divider for other link
                             <li><a href="#">Another Link</a>
-                           <!--- </li>
+                            </li>
                           </ul>
                         </div>
-                      </div> --->
+                      </div>
                 </div>
                 <div class="panel-body">
                 <div class="row">
@@ -62,9 +51,9 @@ foreach($loop as $value) {
                             <th>Name</th>
                             <th>Serial #</th>
                             <th>Current Amount(grams)</th>
-                            <th>Time Remaining <!-- removed </th> -->
+                            <th>Time Remaining</th>
                           </tr>
-                       <!-- </thead> -->
+                        </thead>
                         <tbody>
                           <tr> <!-- examples of table. We need to implement items with a function instead through Adding -->
                             <td>Image Link</td>
@@ -87,17 +76,17 @@ foreach($loop as $value) {
                   <!-- /.col-lg-4 (nested) -->
                 </div>
                 <!-- /.row -->
-           <!--- </div>
+            </div>
             <!-- /.panel-body -->
-     <!--     </div>
+          </div>
                 </div>
                 <!-- /.panel-body -->
-      <!---      </div>
+            </div>
             <!-- /.panel -->
-<!--        </div>
+        </div>
         <!-- /.col-md-10 -->
-    </div> 
-    <!-- /.row --> 
+    </div>
+    <!-- /.row -->
 </div>
 <!-- /#page-wrapper -->
 <?php
