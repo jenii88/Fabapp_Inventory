@@ -12,7 +12,7 @@ if (!$staff || $staff->getRoleID() < 7){
 <title><?php echo $sv['site_name'];?> Inventory</title>
 <div id="page-wrapper">
     <div class="row">
-        <div class="col-lg-12"> <!-- this number shows how long the column is -->
+        <div class="col-lg-12">
             <h1 class="page-header">Inventory</h1>
         </div>
         <!-- /.col-lg-12 -->
@@ -25,20 +25,13 @@ if (!$staff || $staff->getRoleID() < 7){
                     <i class="fa fa-ticket fa-fw"></i> Inventory List
                     <div class ="pull-right"> <!-- This is a comment. direction of button -->
                       <div class="btn-group">
-                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                          Actionis<span class="caret"></span>
-                          </button>
-                          <ul class="dropdown-menu pull-right" role="menu">
-                            <li><a href="#">Add New Material</a>
-                            </li>
-                            <li><a href="#">Add Existing Material</a>
-                            </li>
-                            <li class="divider"></li> //divider for other link
-                            <li><a href="#">Another Link</a>
-                            </li>
-                          </ul>
-                        </div>
+                        <button type ="button" class="btn btn-default btn-xs" data-toggle="moddle" data-target="#myModal">Add Material
+                        </button>
+                        
+
+
                       </div>
+                    </div>
                 </div>
                 <div class="panel-body">
                 <div class="row">
@@ -55,7 +48,7 @@ if (!$staff || $staff->getRoleID() < 7){
                           </tr>
                         </thead>
                         <tbody>
-                          <tr> <!-- examples of table. We need to implement items with a function instead through Adding -->
+                          <tr> 
                             <td>Image Link</td>
                             <td>Abs Color</td>
                             <td>Serial Number</td>
@@ -63,8 +56,8 @@ if (!$staff || $staff->getRoleID() < 7){
                             <td>4 Months</td>
                           </tr>
                         </tbody>
-                                  
-                                        
+
+
                       </table>
                     </div>
                     <!-- /.table-responsive -->
