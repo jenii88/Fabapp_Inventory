@@ -28,38 +28,83 @@ if (!$staff || $staff->getRoleID() < 7){
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <i class="fa fa-ticket fa-fw"></i> Inventory List
-                    <div class ="pull-right"> <!-- This is a comment. direction of button -->
+                    <!-- Code for the button and the modal STARTS HERE -->
+                    <div class ="pull-right"> <!--  direction of button -->
                       <div class="btn-group">
-                        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Add Material</button>
+                        <button onclick="document.getElementById('id01').style.display='block'" class="btn btn-default btn-xs">Add Material</button>
 
                         <div id="id01" class="w3-modal">
-                          <div class="w3-modal-content w3-card-4 w3-animate-zoom">
-                            <header class="w3-container w3-blue">
+                          <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+                            <header class="w3-container w3-light-blue">
                               <span onclick="document.getElementById('id01').style.display='none'"
-                              class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
-                              <h2>Header</h2>
+                              class="w3-button w3-blue w3-large w3-display-topright">&times;</span>
+                              <h2>Add Inventory</h2>
                             </header>
 
                             <div class="w3-bar w3-border-bottom">
-                              <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'New')">New</button>
-                              <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Existing')">Existing</button>
+                              <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'New')">New Material</button>
+                              <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Existing')">Existing Inventory</button>
                             </div>
+                            <!-- The body of the container modal -->
+                            <!-- Existing Material -->
 
-                            <div id="Existing" class="w3-container city">
+                            <div id="Existing" class="w3-container city w3-center">
                               <h1>Existing</h1>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                              <!-- <form class="w3-container" action="/action_page.php"> -->
+                              <div class ="w3-section">
+                                <div class="w3-dropdown-hover">
+                                  <button class="btn btn-default btn-xlarge">Type</button><br>
+                                  <div class="w3-dropdown-content w3-bar-block w3-border">
+                                    <a href="#" class="w3-bar-item w3-button">ABS</a>
+                                    <a href="#" class="w3-bar-item w3-button">VINYL</a>
+                                  </div>
+                                </div>
+
+                                <br><label><b>Color</b></label><br>
+                                <input class'w3-input w3-border w3-margin-bottom" type="text" placeholder="Color" name="color" required><br>
+
+                                <label><b>Qty of Material</b></label><br>
+                                <input class'w3-input w3-border w3-margin-bottom" type="amount" placeholder="Amount (grams)" name="qty" required><br>
+
+                                <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Add</button>
+                              </div>
                             </div>
-                            <div id="New" class="w3-container city">
+                            <!-- End of Existing Material -->
+                            <!-- New Material-->
+
+                            <div id="New" class="w3-container city w3-center">
                               <h1>New</h1>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                              <!-- <form class="w3-container" action="/action_page.php"> -->
+                              <div class ="w3-section">
+                                <label><b>Type</b></label><br>
+                                <input class'w3-input w3-border w3-margin-bottom" type="text" placeholder="Type" name="type" required><br>
+
+                                <label><b>Color</b></label><br>
+                                <input class'w3-input w3-border w3-margin-bottom" type="text" placeholder="Color" name="color" required><br>
+
+                                <label><b>Serial #</b></label><br>
+                                <input class'w3-input w3-border w3-margin-bottom" type="serial" placeholder="Serial Number" name="serial" required><br>
+
+
+                                <label><b>Qty of Material</b></label><br>
+                                <input class'w3-input w3-border w3-margin-bottom" type="amount" placeholder="Amount (grams)" name="qty" required><br>
+
+                                <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Add</button>
+                              </div>
                             </div>
 
+                            <!-- End of New Material -->
+                            <!-- End of body of the modal container -->
+
+                            <! -- Code for the look of the modal container -->
                             <div class="w3-container w3-light-grey w3-padding">
                               <button class="w3-button w3-right w3-white w3-border"
                               onclick="document.getElementById('id01').style.display='none'">Close</button>
                             </div>
                           </div>
                         </div>
+
+                        <!--- java script for the multtiple tab for the modal container -->
                         <script>
                         document.getElementByClassName("tablink")[0].click();
 
@@ -78,7 +123,7 @@ if (!$staff || $staff->getRoleID() < 7){
                         }
                         </script>
 
-                        <!---------- Modal Button Ends Here ------------>
+                        <!-- Modal Button Ends Here -->
 
 
 
