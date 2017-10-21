@@ -30,33 +30,33 @@ if (!$staff || $staff->getRoleID() < 7){
                     <i class="fa fa-ticket fa-fw"></i> Inventory List
                     <div class ="pull-right"> <!-- This is a comment. direction of button -->
                       <div class="btn-group">
-                        <button onclick ="document.getElementById('id01').style.display='block'"class="btn btn-default btn-xs"> Add Material</button>
-                        </button>
+                        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Add Material</button>
 
                         <div id="id01" class="w3-modal">
-                          <div class"w2-modal-content w3-card-4 w3-animate-zoom">
+                          <div class="w3-modal-content w3-card-4 w3-animate-zoom">
                             <header class="w3-container w3-blue">
-                              <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-blue w3-medium w3-display-topright">&times;
-                              </span>
+                              <span onclick="document.getElementById('id01').style.display='none'"
+                              class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
                               <h2>Header</h2>
                             </header>
 
                             <div class="w3-bar w3-border-bottom">
-                              <button class="tablink w3-bar-item w3-button" onclock="openCity(event, 'Existing')">Existing</button>
                               <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'New')">New</button>
-
+                              <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Existing')">Existing</button>
                             </div>
-                            <div id="Existing" class=w3-container city">
+
+                            <div id="Existing" class="w3-container city">
                               <h1>Existing</h1>
                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
-                            <div id="New" class=w3-container city">
+                            <div id="New" class="w3-container city">
                               <h1>New</h1>
                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
 
                             <div class="w3-container w3-light-grey w3-padding">
-                              <button class-"w3-button w3-right w3-white w3-border" onclick="document.getElementById('id01').style.display='none'">Close</button>
+                              <button class="w3-button w3-right w3-white w3-border"
+                              onclick="document.getElementById('id01').style.display='none'">Close</button>
                             </div>
                           </div>
                         </div>
@@ -65,18 +65,20 @@ if (!$staff || $staff->getRoleID() < 7){
 
                         function openCity(evt, cityName) {
                           var i, x, tablinks;
-                          x=document.getElementsByClassName("city");
-                          for (i=0; i< x.length;i++) {
+                          x = document.getElementsByClassName("city");
+                          for (i=0; i < x.length;i++) {
                             x[i].style.display = "none";
                           }
-                          tablinks = document.getElemetnsByClassName("tablink");
-                          for (i=0; i< x.length; i++) {
+                          tablinks = document.getElementsByClassName("tablink");
+                          for (i=0; i < x.length; i++) {
                           tablinks[i].classList.remove("w3-light-grey");
                           }
                           document.getElementById(cityName).style.display="block";
-                          evt.currentTarger.classList.add("w3-light-grey");
+                          evt.currentTarget.classList.add("w3-light-grey");
                         }
                         </script>
+
+                        <!---------- Modal Button Ends Here ------------>
 
 
 
