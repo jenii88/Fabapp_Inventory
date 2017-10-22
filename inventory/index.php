@@ -17,17 +17,17 @@ if (!$staff || $staff->getRoleID() < 7){
 <title><?php echo $sv['site_name'];?> Inventory</title>
 <div id="page-wrapper">
     <div class="row">
-        <div class="col-lg-12"> <!-- this number shows how long the column is -->
+        <div class="col-lg-12">
             <h1 class="page-header">Inventory</h1>
         </div>
         <!-- /.col-lg-12 -->
     </div>
     <!-- /.row -->
     <div class="row">
-        <div class="col-md-10">
+        <div class="col-sm-6 col-sm-offset-3">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <i class="fa fa-ticket fa-fw"></i> Inventory List
+                    <i class="fa fa-linode fa-fw"></i> Inventory
                     <!-- Code for the button and the modal STARTS HERE -->
                     <div class ="pull-right"> <!--  direction of button -->
                       <div class="btn-group">
@@ -123,7 +123,7 @@ if (!$staff || $staff->getRoleID() < 7){
                         }
                         </script>
 
-                        <!-- Modal Button Ends Here -->
+                        <!---------- Modal Button Ends Here ------------>
 
 
 
@@ -133,42 +133,51 @@ if (!$staff || $staff->getRoleID() < 7){
                     </div>
                 </div>
                 <div class="panel-body">
-                <div class="row">
-                  <div class="col-lg-10">
-                    <div class="table-responsive">
-                      <table class="table table-bordered table-hover table-striped">
-                        <thead> <!-- title names of table -->
-                          <tr>
-                            <th>Image</th>
-                            <th>Name</th>
-                            <th>Serial #</th>
-                            <th>Current Amount(grams)</th>
-                            <th>Time Remaining</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr> <!-- examples of table. We need to implement items with a function instead through Adding -->
-                            <td>Image Link</td>
-                            <td>Abs Color</td>
-                            <td>Serial Number</td>
-                            <td>1000</td>
-                            <td>4 Months</td>
-                          </tr>
-                        </tbody>
+                  <table class="table table-condensed">
 
+                    <thead>
+                      <tr>
+                        <th>Material</th>
+                        <th><i class="fa fa-paint-brush fa-fw"></i></th>
 
-                      </table>
-                    </div>
-                    <!-- /.table-responsive -->
-                  </div>
-                  <!-- /.col-lg-10 (nested) -->
-                  <div class="col-lg-4">
-                    <div id="morris-bar-chart"></div>
-                  </div>
-                  <!-- /.col-lg-4 (nested) -->
+                        <?php if ($staff && $staff->getRoleID() >= $sv['LvlOfStaff']){
+                        ?>
+                           <th>Qty on Hand</th>
+                         <?php } ?>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        
+                    <?php //Display Inventory Based on device group
+                    if($result = $mysqli->query("
+                        SELECT `m_name`, SUM(unit_used) as `sum`, `color_hex`, `unit`
+                        FROM `materials`
+                        LEFT JOIN `mats_used`
+                        ON mats_used.m_id = `materials`.`m_id`
+                        WHERE `m_parent` = 1
+                        GROUP BY `m_name`, `color_hex`, `unit`
+                        ORDER BY `m_name` ASC;
+                    ")){
+                        while ($row = $result->fetch_assoc()){
+                            if ($staff && $staff->getRoleID() >= $sv['LvlOfStaff']){ ?>
+                                <tr>
+                                    <td><?php echo $row['m_name']; ?></td>
+                                    <td><div class="color-box" style="background-color: #<?php echo $row['color_hex'];?>;"/></td>
+                                    <td><?php echo number_format($row['sum'])." ".$row['unit']; ?></td>
+                                </tr>
+                            <?php } else {?>
+                                <tr>
+                                    <td><?php echo $row['m_name']; ?></td>
+                                    <td><div class="color-box" style="background-color: #<?php echo $row['color_hex'];?>;"/></td>
+                                </tr>
+                            <?php }
+                        }
+                    } else { ?>
+                        <tr><td colspan="3">None</td></tr>
+                    <?php } ?>
+                    </tbody>
+                  </table>
                 </div>
-                <!-- /.row -->
-            </div>
             <!-- /.panel-body -->
           </div>
                 </div>
