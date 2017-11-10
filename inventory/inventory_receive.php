@@ -25,7 +25,7 @@ if (!$staff || $staff->getRoleID() < 7){
 $conn = new mysqli('localhost', 'root', '', 'fabapp-v0.9');
 
 echo "---30 days---"."<br>"."<br>";
-$sql = "SELECT unit_used FROM  mats_used WHERE date BETWEEN '2017-09-03 00:00:01' AND '2017-10-03 00:00:01'";
+$sql = "SELECT unit_used FROM  mats_used WHERE mu_date BETWEEN '2017-09-03 00:00:01' AND '2017-10-03 00:00:01'";
 $result = $conn->query($sql);
 
 $sql2 =  "SELECT * FROM  materials WHERE m_parent = 1";
@@ -37,7 +37,7 @@ while($row2 = $result2->fetch_assoc()) {
   $name_id = $row2["m_id"];
 
 
-$sql = "SELECT * FROM  mats_used WHERE date BETWEEN '2017-09-03 00:00:01' AND '2017-10-03 00:00:01'";
+$sql = "SELECT * FROM  mats_used WHERE mu_date BETWEEN '2017-09-03 00:00:01' AND '2017-10-03 00:00:01'";
 $result = $conn->query($sql);
 
     while($row = $result->fetch_assoc()) {
@@ -51,7 +51,7 @@ $result = $conn->query($sql);
     $a = 0.00;
 }
 
-$sql = "SELECT * FROM  mats_used WHERE date BETWEEN '2017-09-03 00:00:01' AND '2017-10-03 00:00:01'";
+$sql = "SELECT * FROM  mats_used WHERE mu_date BETWEEN '2017-09-03 00:00:01' AND '2017-10-03 00:00:01'";
 $result = $conn->query($sql);
 
 $sql2 =  "SELECT * FROM  materials WHERE m_parent = 7";
@@ -62,7 +62,7 @@ while($row2 = $result2->fetch_assoc()) {
   $name = $row2["m_name"];
   $name_id = $row2["m_id"];
 
-$sql = "SELECT * FROM  mats_used WHERE date BETWEEN '2017-09-03 00:00:01' AND '2017-10-03 00:00:01'";
+$sql = "SELECT * FROM  mats_used WHERE mu_date BETWEEN '2017-09-03 00:00:01' AND '2017-10-03 00:00:01'";
 $result = $conn->query($sql);
 
 
@@ -84,7 +84,7 @@ $result = $conn->query($sql);
 
 echo "<br>"."<br>"."---90 days---"."<br>"."<br>";
 
-$sql = "SELECT unit_used FROM  mats_used WHERE date BETWEEN '2017-07-05 00:00:01' AND '2017-10-10 00:00:01'";
+$sql = "SELECT unit_used FROM  mats_used WHERE mu_date BETWEEN '2017-07-05 00:00:01' AND '2017-10-10 00:00:01'";
 $result = $conn->query($sql);
 
 $sql2 =  "SELECT * FROM  materials WHERE m_parent = 1";
@@ -96,7 +96,7 @@ while($row2 = $result2->fetch_assoc()) {
   $name_id = $row2["m_id"];
 
 
-$sql = "SELECT * FROM  mats_used WHERE date BETWEEN '2017-07-05 00:00:01' AND '2017-10-10 00:00:01'";
+$sql = "SELECT * FROM  mats_used WHERE mu_date BETWEEN '2017-07-05 00:00:01' AND '2017-10-10 00:00:01'";
 $result = $conn->query($sql);
 
     while($row = $result->fetch_assoc()) {
@@ -112,7 +112,7 @@ $result = $conn->query($sql);
     $a = 0.00;
 }
 
-$sql = "SELECT * FROM  mats_used WHERE date BETWEEN '2017-07-05 00:00:01' AND '2017-10-10 00:00:01'";
+$sql = "SELECT * FROM  mats_used WHERE mu_date BETWEEN '2017-07-05 00:00:01' AND '2017-10-10 00:00:01'";
 $result = $conn->query($sql);
 
 $sql2 =  "SELECT * FROM  materials WHERE m_parent = 7";
@@ -123,7 +123,7 @@ while($row2 = $result2->fetch_assoc()) {
   $name = $row2["m_name"];
   $name_id = $row2["m_id"];
 
-$sql = "SELECT * FROM  mats_used WHERE date BETWEEN '2017-07-05 00:00:01' AND '2017-10-10 00:00:01'";
+$sql = "SELECT * FROM  mats_used WHERE mu_date BETWEEN '2017-07-05 00:00:01' AND '2017-10-10 00:00:01'";
 $result = $conn->query($sql);
 
 
@@ -151,7 +151,7 @@ $result = $conn->query($sql);
 
 echo "<br>"."<br>"."---180 days---"."<br>"."<br>";
 
-$sql = "SELECT unit_used FROM  mats_used WHERE date BETWEEN '2017-04-05 00:00:01' AND '2017-10-10 00:00:01'";
+$sql = "SELECT unit_used FROM  mats_used WHERE mu_date BETWEEN '2017-04-05 00:00:01' AND '2017-10-10 00:00:01'";
 $result = $conn->query($sql);
 
 $sql2 =  "SELECT * FROM  materials WHERE m_parent = 1";
@@ -163,7 +163,7 @@ while($row2 = $result2->fetch_assoc()) {
   $name_id = $row2["m_id"];
 
 
-$sql = "SELECT * FROM  mats_used WHERE date BETWEEN '2017-04-05 00:00:01' AND '2017-10-10 00:00:01'";
+$sql = "SELECT * FROM  mats_used WHERE mu_date BETWEEN '2017-04-05 00:00:01' AND '2017-10-10 00:00:01'";
 $result = $conn->query($sql);
 
     while($row = $result->fetch_assoc()) {
@@ -179,7 +179,7 @@ $result = $conn->query($sql);
     $a = 0.00;
 }
 
-$sql = "SELECT * FROM  mats_used WHERE date BETWEEN '2017-04-05 00:00:01' AND '2017-10-10 00:00:01'";
+$sql = "SELECT * FROM  mats_used WHERE mu_date BETWEEN '2017-04-05 00:00:01' AND '2017-10-10 00:00:01'";
 $result = $conn->query($sql);
 
 $sql2 =  "SELECT * FROM  materials WHERE m_parent = 7";
@@ -190,7 +190,7 @@ while($row2 = $result2->fetch_assoc()) {
   $name = $row2["m_name"];
   $name_id = $row2["m_id"];
 
-$sql = "SELECT * FROM  mats_used WHERE date BETWEEN '2017-04-05 00:00:01' AND '2017-10-10 00:00:01'";
+$sql = "SELECT * FROM  mats_used WHERE mu_date BETWEEN '2017-04-05 00:00:01' AND '2017-10-10 00:00:01'";
 $result = $conn->query($sql);
 
 
